@@ -6,3 +6,5 @@ clean:
 	gcc -g -Wall -D_POSIX_PTHREAD_SEMANTICS $^ -c -o $@
 ej1: sthread.o dictionary.o ejercicio1.o
 	$(CC) $(CFLAGS) $^ -o ejercicio1
+ej2: sthread.o ejercicio2.o
+	$(CC) $(CFLAGS) $^ -o ejercicio2
