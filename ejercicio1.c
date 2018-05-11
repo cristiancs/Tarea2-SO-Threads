@@ -193,21 +193,21 @@ int main(){
 	fclose(fptr);
 
 	printf("Funciones Ingresadas!\n");
-	//while(strcmp(linea, "-1") != 0){
-	printf("Ingrese Operacion:\n>");
-	scanf("%[^\n]", linea);
-	argumentos arg;
-	arg.entrada = linea;
-	arg.funciones = funciones;
-	arg.signo = '=';
-	sthread_t hilo;
-	sthread_create(&hilo, &calcular, &arg);
-	int salida;
+	while(strcmp(linea, "-1") != 0){
+		printf("Ingrese Operacion:\n>");
+		scanf("%s", linea);
+		argumentos arg;
+		arg.entrada = linea;
+		arg.funciones = funciones;
+		arg.signo = '=';
+		sthread_t hilo;
+		sthread_create(&hilo, &calcular, &arg);
+		int salida;
 
-	salida = sthread_join(hilo);
+		salida = sthread_join(hilo);
 
-	printf("La salida es %d" , salida);
-//	}
+		printf("La salida es %d\n\n" , salida);
+	}
 	
 	return 0;
 }

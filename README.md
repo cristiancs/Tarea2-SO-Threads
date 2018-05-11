@@ -16,10 +16,10 @@ make run
 
 # Comentarios
 
-* para el 1
-	* se asume que siempre se ingresan en el formato funcion(x)=algo
-	* no existen espacios entre los caracteres
-	* ninguna linea tiene más de 100 caracteres
+* para el 1 se asume:
+	* Todas las funciones dependen de x
+	* Ninguna linea tiene más de 100 caracteres
 	* La función solo recibe un argumento
-	* Se asume que se ingresaran funciones que existen
-	* No hay operaciones dentro del argumento
+	* Las funciones que se ingresan existen
+	* No hay operaciones dentro del argumento (Ej: f(5+x))
+	* La prueba se realiza de manera manual y no con un archivo " < input.txt"
