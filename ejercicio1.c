@@ -115,7 +115,7 @@ void calcular(void* entrada){
 				arg.entrada = toCall;
 				arg.funciones = input->funciones;
 				arg.signo = signo;
-				printf("Creando thread con signo %c\n", signo);
+				//printf("Creando thread con signo %c\n", signo);
 				sthread_create(&threads[cantidadThreads], &calcular, &arg);
 				cantidadThreads+=1;
 			}
@@ -126,11 +126,11 @@ void calcular(void* entrada){
 				}
 
 				if(signo == '-'){
-					printf("Restando %d\n", atoi(texto));
+					//printf("Restando %d\n", atoi(texto));
 					suma-= atoi(texto);
 				}
 				else if(signo == '+'){
-					printf("Sumando %d\n", atoi(texto));
+					//printf("Sumando %d\n", atoi(texto));
 					suma+= atoi(texto);
 				}
 				
@@ -151,11 +151,11 @@ void calcular(void* entrada){
 	free(threads);
 
 	if(input->signo == '-'){
-		printf("Retornando suma: %d\n", -suma);
+		//printf("Retornando suma: %d\n", -suma);
 		sthread_exit(-suma);
 	}
     else{
-    	printf("Retornando suma: %d\n", suma);
+    	//printf("Retornando suma: %d\n", suma);
 		sthread_exit(suma);
 	}
 
@@ -194,7 +194,7 @@ int main(){
 
 	printf("Funciones Ingresadas!\n");
 	while(strcmp(linea, "-1") != 0){
-		printf("Ingrese Operacion:\n>");
+		printf("Ingrese Operación:\n>");
 		scanf("%s", linea);
 		argumentos arg;
 		arg.entrada = linea;

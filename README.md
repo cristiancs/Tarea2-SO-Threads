@@ -1,17 +1,19 @@
 
 ## Ejecución
-make
-make run
+## Ejercicio 1
+
+make ej1
+./ejercicio1
 
 
 # Estructura
 
 * HEADERS: cabeceras para los archivos .c
-* src: archivos .c que dan vida a la aplicación
-	* sthread.c : Libreria para el manejo de threads (versión moodle)
-	
-	* problema1.c : Solución a Ejercicio 1.
-	* problema2.c : Solución a Ejercicio 2.
+* sthread.c : Libreria para el manejo de threads (versión moodle)
+* dictionary.c : Diccionario de apoyo para el ejercicio 1
+* problema1.c : Solución a Ejercicio 1.
+* problema2.c : Solución a Ejercicio 2.
+* funciones.txt: Archivo donde se guardan las funciones para el problema1
 
 
 # Comentarios
